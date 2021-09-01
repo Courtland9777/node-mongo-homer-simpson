@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
   const errModel = newName.validateSync()
   if (errModel && errModel.message) {
-    return res.status(400).send(errModel.message.split(':')[2].split(',')[0])
+    return res.status(400).send(`${errModel.message.split(':')[2].split(',')[0]}: ${errModel.message.split(':')[3]}`)
   }
 
   Names.exists(

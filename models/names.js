@@ -4,13 +4,13 @@ const Schema = mongoose.Schema
 const nameSchema = new Schema({
   firstName: {
     type: String,
-    required: [true, 'Missing required field firstName'],
-    minLength: [1, 'Missing required field firstName']
+    required: [true, 'Missing required field: firstName'],
+    minLength: [1, 'Missing required field: firstName']
   },
   lastName: {
     type: String,
-    required: [true, 'Missing required field lastName'],
-    minLength: [1, 'Missing required field lastName']
+    required: [true, 'Missing required field: lastName'],
+    minLength: [1, 'Missing required field: lastName']
   }
 })
 
