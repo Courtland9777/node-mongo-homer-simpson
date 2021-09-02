@@ -42,6 +42,8 @@ app.get('/', (req, res) => {
           )
         : await newName.save().then(() => {
           res.status(201).send('Created New Record!')
+        }).catch(err => {
+          console.log('Save failed', err)
         })
     }
   )
